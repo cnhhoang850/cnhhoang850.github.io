@@ -302,22 +302,22 @@ nav a:hover {
 
 #bot .marqueeone{
   animation: marqueebot 40s linear infinite;
-  -webkit-animation: marquee 40s linear infinite;
+  -webkit-animation: marqueebot 40s linear infinite;
 }
 
 #bot .marqueetwo{
   animation: marqueebot 40s linear 10s infinite;
-  -webkit-animation: marquee 40s linear 10s infinite; 
+  -webkit-animation: marqueebot 40s linear 10s infinite; 
 }
 
 #bot .marqueethree{
   animation: marqueebot 40s linear 20s infinite;
-  -webkit-animation: marquee 40s linear 20s infinite;
+  -webkit-animation: marqueebot 40s linear 20s infinite;
 }
 
 #bot .marqueefour{
   animation: marqueebot 40s linear 30s infinite;
-  -webkit-animation: marquee 40s linear 30s infinite;
+  -webkit-animation: marqueebot 40s linear 30s infinite;
 }
 
 
