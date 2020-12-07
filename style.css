@@ -280,36 +280,44 @@ nav a:hover {
 
 /* would need to be adjusted depending on time */
 .marquee .marqueeone{
-  animation: marquee 40s linear infinite
+  animation: marquee 40s linear infinite;
+  -webkit-animation: marquee 40s linear infinite;
 }
 
 .marquee .marqueetwo{
-  animation: marquee 40s linear 10s infinite 
+  animation: marquee 40s linear 10s infinite ;
+  -webkit-animation: marquee 40s 10s linear infinite;
 }
 
 .marquee .marqueethree{
-  animation: marquee 40s linear 20s infinite
+  animation: marquee 40s linear 20s infinite;
+  -webkit-animation: marquee 40s 20s linear infinite;
 }
 
 .marquee .marqueefour{
-  animation: marquee 40s linear 30s infinite
+  animation: marquee 40s linear 30s infinite;
+  -webkit-animation: marquee 40s 30s linear infinite;
 }
 
 
 #bot .marqueeone{
-  animation: marqueebot 40s linear infinite
+  animation: marqueebot 40s linear infinite;
+  -webkit-animation: marquee 40s linear infinite;
 }
 
 #bot .marqueetwo{
-  animation: marqueebot 40s linear 10s infinite 
+  animation: marqueebot 40s linear 10s infinite;
+  -webkit-animation: marquee 40s linear 10s infinite; 
 }
 
 #bot .marqueethree{
-  animation: marqueebot 40s linear 20s infinite
+  animation: marqueebot 40s linear 20s infinite;
+  -webkit-animation: marquee 40s linear 20s infinite;
 }
 
 #bot .marqueefour{
-  animation: marqueebot 40s linear 30s infinite
+  animation: marqueebot 40s linear 30s infinite;
+  -webkit-animation: marquee 40s linear 30s infinite;
 }
 
 
@@ -340,11 +348,24 @@ nav a:hover {
   100% {left: -100%}
 }
 
+@-webkit-keyframes marquee {
+  0% { left: 100%; }
+  50% { left: -100%; }
+  100% {left: -100%}
+}
+
 @keyframes marqueebot {
   0% {  left: -100%; }
   50% {  left: 100%; }
   100% { left: 100%}
 }
+
+@-webkit-keyframes marqueebot {
+  0% {  left: -100%; }
+  50% {  left: 100%; }
+  100% { left: 100%}
+}
+
 
 
 /* @import must be at top of file, otherwise CSS will not work */
