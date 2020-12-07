@@ -1,4 +1,8 @@
 @font-face {
+  font-family: sohne-display;
+  src: url(fonts/Sequel100Black-76.ttf)
+}
+@font-face {
   font-family: sohne-normal;
   src: url(Sohne-Leicht.otf);
 }
@@ -8,10 +12,15 @@
   src: url(fonts/Sohne-Buch.otf);
 }
 
+@font-face {
+  font-family: sohne-thick;
+  src: url(fonts/Sohne-Halbfett.otf);
+}
+
 
 /*---------------Variables declaration-----------------*/
 :root {
-  --font-bold: sohne-text;
+  --font-bold: sohne-thick;
   --font-sans: sohne-normal;
   --font-mono: SFMono-Regular,Consolas,Inconsolatas,Liberation Mono,Menlo,monospace;
 
@@ -48,97 +57,86 @@
 
 /*---------------Variables declaration-----------------*/
 
-/*--------------THEMES!-----------------*/
-
-.home {
-  background-color: var(--color-bg);
-}
-
-.web {
-  background-color: var(--color-writing);
-}
-
-.photos {
-  background-color: var(--color-photos);
-  
-}
-
-.reading {
-  background-color: var(--color-contact);
-  color: var(--font-color-dark);
-}
-
-.listening {
-  background-color: var(--color-listening);
-  color: var(--font-color-dark);
-}
-
-/*--------------THEMES!-----------------*/
-
-
-/*--------------Global text-----------------*/
 
 *{
- margin: 0;
- padding: 0;
- box-sizing: border-box;
- font-family: var(--font-sans);
- font-size: var(--font-default);
- font-weight: normal;
- -webkit-font-smoothing: antialiased;
-}
-
-h1 {
-  font-family: var(--font-bold);
- font-size: var(--font-default);
- opacity: var(--font-opacity-secondary);
-}
-
-
-h2 {
-  font-family: var(--font-bold);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-sans);
   font-size: var(--font-default);
-  opacity: var(--font-opacity-first);
-}
-
-p {
-  font-weight: 500;
-  line-height: var(--spacing-m);
-  max-width: var(--spacing-maxwidth);
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+ }
+ 
+ h1 {
+   font-family: var(--font-bold);
+  font-size: var(--font-default);
   opacity: var(--font-opacity-secondary);
-  font-size: var(--font-s);
+ }
+ 
+ 
+ h2 {
+   font-family: var(--font-bold);
+   font-size: var(--font-default);
+   opacity: var(--font-opacity-first);
+ }
+ 
+ p {
+   font-weight: 500;
+   line-height: var(--spacing-m);
+   max-width: var(--spacing-maxwidth);
+   opacity: var(--font-opacity-secondary);
+   font-size: var(--font-s);
+ }
+ 
+ 
+ *::-webkit-scrollbar {
+     display: none;
+ }
+
+body { 
+  margin: 0;
+  height: 100vh;  
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  transition: 300ms linear  ;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 
-*::-webkit-scrollbar {
-    display: none;
-}
-
-body {
-    width: 100vw;
-    height: 100vh;   
-    padding: 24px;
-    background-color: var(--color-bg);
-    transition: 200ms ease-out;
-}
-
-a {
-  font-family: var(--font-bold);
-  display: block;
-  line-height: 1.25;
-  cursor: pointer;
-  opacity: var(--font-opacity-secondary);
-  transition: 0.1s;
-  margin: 0.3rem
+.marquee a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    font-family: sohne-display;
+    color: var(--color-listening);
 }
 
 
-a:hover {
-  opacity: 1;
-  transform: translateX(4px);
+
+.marquee {
+  height: 3rem;
+  width: 100%;
+
+  overflow: hidden;
+  position: relative;
+  background-color: #e9e5fb;  
+  padding: 0 0 4px 0;
 }
 
-/*--------------Global text-----------------*/
+#bot {
+  position: relative ;
+  bottom: 0;
+  padding: 0 0 8px 0;
+}
 
 /*--------------Desktop Grid basis-----------------*/
 .container {
@@ -183,8 +181,23 @@ a:hover {
   font-family: var(--font-serif);
 }
 
-/*--------------Desktop Grid basis-----------------*/
+nav a {
+  font-family: sohne-thick;
+  display: block;
+  line-height: 1.25;
+  cursor: pointer;
+  opacity: var(--font-opacity-secondary);
+  transition: 0.1s;
+  margin: 0.3rem
+}
 
+
+nav a:hover {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/*--------------Desktop Grid basis-----------------*/
 
 
 /*--------------Collapsible content list-----------------*/
@@ -193,14 +206,19 @@ a:hover {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  padding-bottom: 24px;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
+.collapse:first-child {
+  padding-bottom: 72px;
+  padding-top: 4px;
+} 
+
 .collapse > .contentBox {
   width: 90%;
+  margin-top: -20px;
 
   display: grid;
   column-gap: 24px;
@@ -214,13 +232,10 @@ a:hover {
 
   font-family: var(--font-bold);
   -webkit-font-smoothing: antialiased;
-
-  padding-bottom: 1rem;
 }
 
 .contentBox > .contentBoxView {
-  grid-column: 2/10;
-  padding-bottom: 1rem;
+  grid-column: 3/10;
   z-index: -10;
 }
 
@@ -262,120 +277,109 @@ a:hover {
 /*--------------Co  llapsible content list-----------------*/
 
 
-/*--------------Mobile grid basis-----------------*/
 
-@media (max-width: 780px) {
-    .container {
-        width: 100%;
-        height: auto;
-        grid-gap: 0;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 8rem auto 24px 1fr;
-    }
-
-    a:hover {
-      transform: translateX(-4px);
-    }
-
-    .logo{
-        grid-column: 1/2;
-        grid-row: 1/2;
-      }
-      
-      .title {
-          grid-column: 1/3;
-          grid-row: 2/3;
-      }
-      
-      .nav{
-          grid-column: 2/3;
-          grid-row: 1/2;
-
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
-      }
-      
-      a {
-        text-align: right;
-      }
-      
-      .contentContainer{
-        grid-column: 1/3;
-        grid-row: 3/5;
-
-        overflow: hidden;
-        padding: 0;
-        margin:0;
-      }
-
-      .nav .menu {
-        position: absolute;
-        opacity: 1;
-        font-weight: bold;
-        opacity: var(--font-opacity-secondary);
-        transform: translateX(-5px);
-      }
-
-      .nav nav {
-        padding: 1.2rem 0 0 0 ;
-        opacity: 0;
-        transform-origin: top;
-        transition: 200ms ease-in ;
-      }
-      
-      .nav nav:hover {
-        opacity: 1;
-      }
-
-      .collapse {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        justify-content: center;
-      }
-  
-      .collapse >  .contentBox {
-        margin: 0;
-        width: 80%;
-
-        align-self: center;
-        box-sizing: border-box;
-
-        display: flex;
-        flex-direction: column;
-      }
-  
-      .subtitle {
-        display: block;
-      }
-  
-      body {  
-        height: auto;
-      }
-  
-      .container {
-        height: auto
-      }
-  
-      #titleText {
-        box-sizing: border-box;
-        padding: 1rem 0 2rem 0;
-      }
+/* would need to be adjusted depending on time */
+.marquee .marqueeone{
+  animation: marquee 40s linear infinite
 }
 
-.text {
+.marquee .marqueetwo{
+  animation: marquee 40s linear 10s infinite 
+}
+
+.marquee .marqueethree{
+  animation: marquee 40s linear 20s infinite
+}
+
+.marquee .marqueefour{
+  animation: marquee 40s linear 30s infinite
+}
+
+
+#bot .marqueeone{
+  animation: marqueebot 40s linear infinite
+}
+
+#bot .marqueetwo{
+  animation: marqueebot 40s linear 10s infinite 
+}
+
+#bot .marqueethree{
+  animation: marqueebot 40s linear 20s infinite
+}
+
+#bot .marqueefour{
+  animation: marqueebot 40s linear 30s infinite
+}
+
+
+
+
+/* even out the elements */
+.marquee div {
+  position: absolute;
+  width: 100%;
+  left: 100%;
+  height: 40px;
   display: flex;
-  height: calc(100% - 1rem);
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
 }
 
-@media (max-width: 780px) {
-  .text {
-    display: block;
-    margin-top: 1.5rem;
+.marquee:hover div {
+  animation-play-state: paused;
+}
+
+#bot:hover div{
+  animation-play-state: paused;
+}
+
+/* add delay at the end of animation so you dont start while another div is going */
+@keyframes marquee {
+  0% { left: 100%; }
+  50% { left: -100%; }
+  100% {left: -100%}
+}
+
+@keyframes marqueebot {
+  0% {  left: -100%; }
+  50% {  left: 100%; }
+  100% { left: 100%}
+}
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+
+/*--------------THEMES!-----------------*/
+
+.home {
+  background-color: var(--color-bg);
+}
+
+.web {
+  background-color: var(--color-writing);
+}
+
+.photos {
+  background-color: var(--color-photos);
+  
+}
+
+.reading {
+  background-color: var(--color-contact);
+  color: var(--font-color-dark);
+}
+
+.listening {
+  background-color: var(--color-listening);
+  color: var(--font-color-dark);
+}
+
+/*--------------THEMES!-----------------*/
+
+@media (max-width: 900px) {
+  .marquee a {
+    font-size: 3vw;
+    display: grid;
+    place-items: center;
   }
 }
-
-/*--------------Mobile grid basis-----------------*/
