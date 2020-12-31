@@ -147,10 +147,10 @@ body {
 
 
   color: rgba(255, 255, 255, 1);
-  transition: 1s cubic-bezier(.3,.7,0,1);
-  transition-duration: 1s;
+  transition: .6s cubic-bezier(.3,.7,0,1);
+  transition-duration: .6s;
   transition-timing-function: cubic-bezier(0.3, 0.7, 0, 1);
-  transition-delay: .4s;
+  transition-delay: .2s;
 }
 
 .search .nav.show {
@@ -198,9 +198,9 @@ body {
   padding-left: 7pt;
   color: rgba(255, 255, 255, 1);
   transition: .6s cubic-bezier(.3,.7,0,1);
-  transition-duration: 1s;
+  transition-duration: .6s;
   transition-timing-function: cubic-bezier(0.3, 0.7, 0, 1);
-  transition-delay: .4s;
+  transition-delay: .2s;
 }
 
 .searchBar.shorten {
