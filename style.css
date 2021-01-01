@@ -112,7 +112,7 @@ body {
   font-size: 2vw;
 }
 
-.nav a:hover {
+.nav a:hover, .nav a:active {
   text-decoration: underline;
 }
 
@@ -288,7 +288,7 @@ body {
 
 }
 
-.item-wrapper:hover {
+.item-wrapper:hover, .item-wrapper:active {
   transform: scale(.98);
 }
 
@@ -345,7 +345,7 @@ body {
   transition-delay: 0s;
 }
 
-.border:hover {
+.border:hover, .border:active {
   border-width: .5vw;
 }
 
