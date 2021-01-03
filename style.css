@@ -6,6 +6,11 @@
 }
 
 @font-face {
+  font-family: 'gotham';
+  src: url('Gotham-Ultra.otf');
+}
+
+@font-face {
   font-family: 'chaneywide';
   src: url('CHANEY-Wide.otf');
   font-weight: normal;
@@ -59,7 +64,8 @@ body {
   height: auto;
 
   padding: 2vw 0 0 0;
-  margin: 0;
+  margin: 0;  
+  
 
   color: white; 
   background-color: rgb(0, 0, 0);
@@ -82,13 +88,13 @@ body {
 .brand {
   font-family: chaney;
   font-size: 5vw;
-  line-height: 3.5vw;
+  line-height: 2vw;
 }
 
 .brandcoffee {
-  font-family: chaney;
-  font-size: 4.1vw;
-  line-height: 4vw;
+  font-family: gotham;
+  font-size: 1.9vw;
+  line-height: 2vw;
 }
 
 .stretch {
@@ -420,6 +426,10 @@ body {
 
 .green {
   background-color: rgba(0, 252, 105, 0.582);
+}
+
+.milk {
+  background-color: rgb(255, 237, 197);
 }
 
 
