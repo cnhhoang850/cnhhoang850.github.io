@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/cnhhoang850.github.io/static/css/main.82137615.chunk.css",
+    "main.js": "/cnhhoang850.github.io/static/js/main.58735439.chunk.js",
+    "main.js.map": "/cnhhoang850.github.io/static/js/main.58735439.chunk.js.map",
+    "runtime-main.js": "/cnhhoang850.github.io/static/js/runtime-main.3b5440e7.js",
+    "runtime-main.js.map": "/cnhhoang850.github.io/static/js/runtime-main.3b5440e7.js.map",
+    "static/js/2.7d79e858.chunk.js": "/cnhhoang850.github.io/static/js/2.7d79e858.chunk.js",
+    "static/js/2.7d79e858.chunk.js.map": "/cnhhoang850.github.io/static/js/2.7d79e858.chunk.js.map",
+    "static/js/3.a6c7db8c.chunk.js": "/cnhhoang850.github.io/static/js/3.a6c7db8c.chunk.js",
+    "static/js/3.a6c7db8c.chunk.js.map": "/cnhhoang850.github.io/static/js/3.a6c7db8c.chunk.js.map",
+    "index.html": "/cnhhoang850.github.io/index.html",
+    "static/css/main.82137615.chunk.css.map": "/cnhhoang850.github.io/static/css/main.82137615.chunk.css.map",
+    "static/js/2.7d79e858.chunk.js.LICENSE.txt": "/cnhhoang850.github.io/static/js/2.7d79e858.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/cnhhoang850.github.io/static/media/cell-bg.fc943fd7.jpg",
+    "static/media/tea.9c74c900.png": "/cnhhoang850.github.io/static/media/tea.9c74c900.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3b5440e7.js",
+    "static/js/2.7d79e858.chunk.js",
+    "static/css/main.82137615.chunk.css",
+    "static/js/main.58735439.chunk.js"
+  ]
+}
